@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="DaysLoop.Counter"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DaysLoop"
+             mc:Ignorable="d" 
+             d:DesignHeight="77" d:DesignWidth="200">
+    <UserControl.Background>
+        <SolidColorBrush Opacity="0.1" Color="White"/>
+    </UserControl.Background>
+    <Grid>
+        <Label Name="lblTimeLeft" FontSize="48" HorizontalContentAlignment="Center" Foreground="Black" Content="00:00:00"/>
+    </Grid>
+</UserControl>

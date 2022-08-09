@@ -1,0 +1,31 @@
+﻿<Window x:Class="DaysLoop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DaysLoop"
+        mc:Ignorable="d"
+        AllowsTransparency="True" Title="How long" 
+        Height="100" Width="200" 
+        VerticalAlignment="Center" 
+        HorizontalAlignment="Center"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None" SizeToContent="Manual"
+        ResizeMode="NoResize"
+        MouseDown="Window_MouseDown" Topmost="True">
+    <Window.Background>
+        <SolidColorBrush Opacity="0" Color="White"/>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="23"/>
+            <RowDefinition Height="77"/>
+        </Grid.RowDefinitions>
+        <local:Counter Grid.Row="1" />
+        <Button x:Name="btnClose" Content="X" Height="23" Width="23" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="2.064,0.309" Margin="100,0,0,0" Background="{x:Null}" Click="btnClose_Click" MouseEnter="btnClose_MouseEnter" MouseLeave="btnClose_MouseLeave" Cursor="Hand" BorderBrush="{x:Null}" Foreground="White"/>
+        <Button x:Name="btnMinimize" Content="-" Height="23" Width="23" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="2.064,0.309" Margin="77,0,0,0" Background="{x:Null}" Click="btnMinimize_Click" Cursor="Hand" BorderBrush="{x:Null}" Foreground="White"/>
+    </Grid>
+</Window>
