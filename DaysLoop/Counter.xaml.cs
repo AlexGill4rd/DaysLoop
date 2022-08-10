@@ -41,6 +41,10 @@ namespace DaysLoop
             DateTime date2 = new DateTime(now.Year, now.Month, now.Day, 17, 0, 0);
             TimeSpan value = date2.Subtract(date1);
             lblTimeLeft.Content = value;
+            if (value.ToString().Contains('-'))
+            {
+                lblTimeLeft.Foreground = new SolidColorBrush(Colors.Red);
+            }
         }
     }
 }
