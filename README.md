@@ -5,7 +5,7 @@ Always wanted a program that shows you how long you have to stay in front of you
 The program will always stay above any program. This way you can click anywhere but you will still be able to see the timer.
 
 ## Restrictions
-The application has some limitations. Since it is adjusted to my work times. The clock will always show how long it is until 17:00:00. Then he starts counting back.
+The application has some limitations. Since it is adjusted to my work times. The clock will always show how long it is until 17:00:00. When working overtime the clock will change color to show that you are making extra money or just losing too much time xD
 
 ### Side node
 Do whatever you want with this. Use it yourself. Or customize it. Be free :D
