@@ -39,7 +39,12 @@ namespace DaysLoop
 
         private void btnMinimize_Click(object sender, RoutedEventArgs e)
         {
-            base.WindowState = WindowState.Minimized;
+           base.WindowState = WindowState.Minimized;
+        }
+        Settings settings = new Settings();
+        private void btnSettings_Click(object sender, RoutedEventArgs e)
+        {  
+            settings.Show();
         }
     }
 }

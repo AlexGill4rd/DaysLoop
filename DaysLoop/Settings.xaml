@@ -1,0 +1,52 @@
+﻿<Window x:Class="DaysLoop.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DaysLoop"
+        mc:Ignorable="d"
+        Title="Settings" Height="260"
+        Width="300" 
+        WindowStartupLocation="CenterScreen" 
+        Topmost="True" ShowInTaskbar="False" 
+        WindowStyle="None" MouseDown="Window_MouseDown">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="39*"/>
+            <ColumnDefinition Width="61*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0">
+            <Button x:Name="btnClockIn" Content="Clock In" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Width="100" IsDefault="True" Click="btnClockIn_Click"/>
+            <Button x:Name="btnClockOut" Content="Clock out" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="100" IsEnabled="False" Click="btnClockOut_Click"/>
+            <Label Name="lblClockedState" Content="Not clocked in" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Padding="0,0,5,0" Background="White" Foreground="Red">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleY="0.716"/>
+                        <RotateTransform Angle="-0.526"/>
+                        <TranslateTransform Y="-0.237"/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Label Content="Salary/h:" Padding="0,5,5,5"/>
+            <TextBox Name="txtSalary" TextWrapping="Wrap" Text="13"/>
+        </StackPanel>
+        <GroupBox Name="grpData" Header="Data" Margin="5,10,10,10" Visibility="Visible" Grid.Column="1">
+            <StackPanel>
+                <Label Content="Time worked:" Height="24" Width="158" Padding="0,5,5,5"/>
+                <TextBox x:Name="txtWorkingTime" TextWrapping="Wrap" Text="00:00:00"/>
+
+                <Label Content="Clocked in:" Height="24" Width="158" Padding="0,5,5,5"/>
+                <TextBox x:Name="txtClockedIn" TextWrapping="Wrap" Text="00:00:00"/>
+
+
+                <Label Content="Clocked out:" Height="24" Width="158" Padding="0,5,5,5"/>
+                <TextBox Name="txtClockedOut" TextWrapping="Wrap" Text="00:00:00"/>
+
+                <Label Content="Money Earned:" Height="24" Width="158" Padding="0,5,5,0"/>
+                <TextBox x:Name="txtTotalRevenue" TextWrapping="Wrap" Text="€0,00"/>
+            </StackPanel>
+        </GroupBox>
+        <Button Name="btnCloseSettings" Content="Close Menu" HorizontalAlignment="Left" Margin="10,220,0,0" VerticalAlignment="Top" Width="100" Click="btnCloseSettings_Click"/>
+    </Grid>
+</Window>

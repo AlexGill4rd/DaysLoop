@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:DaysLoop"
         mc:Ignorable="d"
         AllowsTransparency="True" Title="How long" 
-        Height="100" Width="200" 
+        Height="77" Width="200" 
         VerticalAlignment="Center" 
         HorizontalAlignment="Center"
         WindowStartupLocation="CenterScreen"
@@ -21,11 +21,11 @@
             <ColumnDefinition Width="200"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="23"/>
-            <RowDefinition Height="77"/>
+            <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
-        <local:Counter Grid.Row="1" />
-        <Button x:Name="btnClose" Content="X" Height="23" Width="23" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="2.064,0.309" Margin="100,0,0,0" Background="{x:Null}" Click="btnClose_Click" MouseEnter="btnClose_MouseEnter" MouseLeave="btnClose_MouseLeave" Cursor="Hand" BorderBrush="{x:Null}" Foreground="White"/>
-        <Button x:Name="btnMinimize" Content="-" Height="23" Width="23" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="2.064,0.309" Margin="77,0,0,0" Background="{x:Null}" Click="btnMinimize_Click" Cursor="Hand" BorderBrush="{x:Null}" Foreground="White"/>
+        <local:Counter Margin="0,0,0,23" />
+        <Button x:Name="btnClose" Content="X" Height="21" Width="23" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="2.064,0.309" Margin="177,0,0,0" Background="{x:Null}" Click="btnClose_Click" MouseEnter="btnClose_MouseEnter" MouseLeave="btnClose_MouseLeave" Cursor="Hand" BorderBrush="{x:Null}" Foreground="White" Padding="0,0,0,0"/>
+        <Button x:Name="btnMinimize" Content="-" Height="21" Width="23" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="2.064,0.309" Margin="154,0,0,0" Background="{x:Null}" Click="btnMinimize_Click" Cursor="Hand" BorderBrush="{x:Null}" Foreground="White" Padding="0,0,0,0"/>
+        <Button x:Name="btnSettings" Content="?" Height="21" Width="23" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="2.064,0.309" Background="{x:Null}" Click="btnSettings_Click" Cursor="Hand" BorderBrush="{x:Null}" Foreground="White" Padding="0,0,0,0"/>
     </Grid>
 </Window>

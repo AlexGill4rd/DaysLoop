@@ -23,3 +23,5 @@ C:\Users\Kimeru\source\repos\DaysLoop\DaysLoop\obj\Release\net6.0-windows\DaysLo
 C:\Users\Kimeru\source\repos\DaysLoop\DaysLoop\obj\Release\net6.0-windows\Counter.g.cs
 C:\Users\Kimeru\source\repos\DaysLoop\DaysLoop\obj\Release\net6.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\Kimeru\source\repos\DaysLoop\DaysLoop\obj\Release\net6.0-windows\Counter.baml
+C:\Users\Kimeru\source\repos\DaysLoop\DaysLoop\obj\Release\net6.0-windows\Settings.g.cs
+C:\Users\Kimeru\source\repos\DaysLoop\DaysLoop\obj\Release\net6.0-windows\Settings.baml
