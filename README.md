@@ -12,6 +12,11 @@ Do whatever you want with this. Use it yourself. Or customize it. Be free :D
 It's also a very small project. It is not difficult to read the code. The program consists of roughly 50 lines of code.
 
 ## Photo's
-![image](https://user-images.githubusercontent.com/57497005/183678263-6c505588-81db-44e5-8c46-1f1283a9e4de.png)
-![image](https://user-images.githubusercontent.com/57497005/183678422-595e8c9f-dd4f-4a35-99e2-62e290a9e775.png)
+This is what is being display to the user. Here you can see how long you still need to work. The blue is an example background. Normally it is transparant :D
 
+![image](https://user-images.githubusercontent.com/57497005/183903243-912db06b-afd6-4e19-b8ae-a09e6837afa3.png)
+
+
+Here you can see the data settings of the application.
+
+![image](https://user-images.githubusercontent.com/57497005/183903266-f967d27a-a95e-443b-b1cd-f6c95317c7e9.png)
