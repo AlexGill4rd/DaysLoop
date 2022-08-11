@@ -9,7 +9,7 @@ The application has some limitations. Since it is adjusted to my work times. The
 
 ### Side node
 Do whatever you want with this. Use it yourself. Or customize it. Be free :D
-It's also a very small project. It is not difficult to read the code. The program consists of roughly 50 lines of code.
+It's also a very small project. It is not difficult to read the code. The program consists of roughly 100 lines of code.
 
 ## Photo's
 This is what is being display to the user. Here you can see how long you still need to work. The blue is an example background. Normally it is transparant :D
