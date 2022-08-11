@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.Win32;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.IO;
@@ -15,6 +16,7 @@ namespace DaysLoop
     public partial class Settings : Window
     {
         DateTime clockInTime;
+        DateTime clockOutTime;
         TimeSpan timeWorked;
         DispatcherTimer dispatcherTimer = new DispatcherTimer();
         bool clockedIn = false;
@@ -73,6 +75,11 @@ namespace DaysLoop
         }
         private void btnClockIn_Click(object sender, RoutedEventArgs e)
         {
+            clockInTime = default;
+            clockOutTime = default;
+            revenue = default;
+            timeWorked = default;
+
             grpData.Visibility = Visibility.Visible;
             btnClockIn.IsEnabled = false;
             btnClockOut.IsEnabled = true;
@@ -82,27 +89,29 @@ namespace DaysLoop
             txtClockedIn.Text = clockInTime.ToString(@"hh\:mm\:ss");
             dispatcherTimer.Start();
             clockedIn = true;
+            btnSave.IsEnabled = false;
         }
 
         private void btnClockOut_Click(object sender, RoutedEventArgs e)
         {
-            DateTime clockedOutTime = DateTime.Now;
+            clockOutTime= DateTime.Now;
             dispatcherTimer.Stop();
-            timeWorked = clockedOutTime.Subtract(clockInTime);
+            timeWorked = clockOutTime.Subtract(clockInTime);
             btnClockIn.IsEnabled = true;
             btnClockOut.IsEnabled = false;
             lblClockedState.Content = "Not clocked in!";
             lblClockedState.Foreground = new SolidColorBrush(Colors.Red);
-            txtClockedOut.Text = clockedOutTime.ToString(@"hh\:mm\:ss");
+            txtClockedOut.Text = clockOutTime.ToString(@"hh\:mm\:ss");
             float salary = float.Parse(txtSalary.Text);
             float revenue = ((float)timeWorked.Hours * salary) + ((float)timeWorked.Minutes / 60 * salary) + ((float)timeWorked.Seconds / 60 / 60 * salary);
             txtTotalRevenue.Text = "€" + revenue.ToString();
             clockedIn = false;
+            btnSave.IsEnabled = true;
         }
 
         private void btnCloseSettings_Click(object sender, RoutedEventArgs e)
         {
-            base.Hide();
+           base.Hide();
         }
 
         private void Window_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
@@ -130,6 +139,24 @@ namespace DaysLoop
                 {
                     File.Delete(path);
                 }
+            }
+        }
+
+        private void btnSave_Click(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Text file (*.txt)|*.txt";
+            saveFileDialog.FileName = "Workhours-" + DateTime.Now.ToString("MM/dd/yyyy");
+            if (saveFileDialog.ShowDialog() == true)
+            {
+                File.AppendAllText(saveFileDialog.FileName, DateTime.Now.ToString() + Environment.NewLine);
+                File.AppendAllText(saveFileDialog.FileName, "----------------");
+                File.AppendAllText(saveFileDialog.FileName, "Clock In Time: " + clockInTime.ToString("dddd, dd MMMM yyyy HH:mm:ss") + Environment.NewLine);
+                File.AppendAllText(saveFileDialog.FileName, "Clock Out Time: " + clockOutTime.ToString("dddd, dd MMMM yyyy HH:mm:ss") + Environment.NewLine);
+                File.AppendAllText(saveFileDialog.FileName, "Time Worked: " + timeWorked.ToString("HH:mm:ss") + Environment.NewLine);
+                File.AppendAllText(saveFileDialog.FileName, "Money Earned: €" + revenue.ToString() + Environment.NewLine);
+                File.AppendAllText(saveFileDialog.FileName, "----------------");
+                MessageBox.Show("Data is saved successfully!", "Save Information");
             }
         }
     }

@@ -48,5 +48,6 @@
             </StackPanel>
         </GroupBox>
         <Button Name="btnCloseSettings" Content="Close Menu" HorizontalAlignment="Left" Margin="10,220,0,0" VerticalAlignment="Top" Width="100" Click="btnCloseSettings_Click"/>
+        <Button x:Name="btnSave" Content="Save Day" IsEnabled="False" HorizontalAlignment="Left" Margin="10,195,0,0" VerticalAlignment="Top" Width="100" Click="btnSave_Click"/>
     </Grid>
 </Window>
