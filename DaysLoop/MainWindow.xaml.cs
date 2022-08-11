@@ -24,7 +24,7 @@ namespace DaysLoop
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
-            base.Close();
+            System.Windows.Application.Current.Shutdown();
         }
 
         private void btnClose_MouseEnter(object sender, MouseEventArgs e)

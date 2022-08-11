@@ -61,7 +61,7 @@ namespace DaysLoop {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/DaysLoop;component/counter.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/DaysLoop;V1.0.0.0;component/counter.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Counter.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

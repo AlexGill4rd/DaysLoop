@@ -9,7 +9,7 @@
         Width="300" 
         WindowStartupLocation="CenterScreen" 
         Topmost="True" ShowInTaskbar="False" 
-        WindowStyle="None" MouseDown="Window_MouseDown">
+        WindowStyle="None" MouseDown="Window_MouseDown" Closing="Window_Closing">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="39*"/>
