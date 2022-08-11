@@ -34,7 +34,6 @@ namespace DaysLoop
                 {
                     JObject jsonObject = JObject.Parse(line);
                     clockInTime = (DateTime)jsonObject["ClockInTime"];
-                    timeWorked = TimeSpan.Parse((string)jsonObject["TimeWorked"]);
                     clockedIn = (bool)jsonObject["Clocked"];
                     updateTimer();
                     if (clockedIn)
@@ -120,7 +119,6 @@ namespace DaysLoop
                 var data = new
                 {
                     ClockInTime = clockInTime,
-                    TimeWorked = timeWorked,
                     Clocked = clockedIn,
                 };
                 string jsonData = JsonConvert.SerializeObject(data);

@@ -25,3 +25,5 @@ C:\Users\Kimeru\source\repos\DaysLoop\DaysLoop\obj\Release\net6.0-windows\Genera
 C:\Users\Kimeru\source\repos\DaysLoop\DaysLoop\obj\Release\net6.0-windows\Counter.baml
 C:\Users\Kimeru\source\repos\DaysLoop\DaysLoop\obj\Release\net6.0-windows\Settings.g.cs
 C:\Users\Kimeru\source\repos\DaysLoop\DaysLoop\obj\Release\net6.0-windows\Settings.baml
+C:\Users\Kimeru\source\repos\DaysLoop\DaysLoop\bin\Release\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\Kimeru\source\repos\DaysLoop\DaysLoop\obj\Release\net6.0-windows\DaysLoop.csproj.CopyComplete
