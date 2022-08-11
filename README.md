@@ -7,6 +7,12 @@ The program will always stay above any program. This way you can click anywhere 
 ## Restrictions
 The application has some limitations. Since it is adjusted to my work times. The clock will always show how long it is until 17:00:00. When working overtime the clock will change color to show that you are making extra money or just losing too much time xD
 
+## How to use?
+#### 1. Download the latest version of the project at releases.
+#### 2. Unzip the file on your computer.
+#### 3. If you wish, you can make a shortcut of the DaysLoop.exe file to open it easily.
+#### 4. Run the DaysLoop.exe file and you are ready to go.
+
 ### Side node
 Do whatever you want with this. Use it yourself. Or customize it. Be free :D
 It's also a very small project. It is not difficult to read the code. The program consists of roughly 100 lines of code.
