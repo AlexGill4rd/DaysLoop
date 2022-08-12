@@ -146,14 +146,15 @@ namespace DaysLoop
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Text file (*.txt)|*.txt";
-            saveFileDialog.FileName = "Workhours-" + DateTime.Now.ToString("MM/dd/yyyy");
+            saveFileDialog.FileName = "Workhours-" + DateTime.Now.ToString("MMddyyyy");
             if (saveFileDialog.ShowDialog() == true)
             {
+                File.WriteAllText(saveFileDialog.FileName, string.Empty);
                 File.AppendAllText(saveFileDialog.FileName, DateTime.Now.ToString() + Environment.NewLine);
-                File.AppendAllText(saveFileDialog.FileName, "----------------");
+                File.AppendAllText(saveFileDialog.FileName, "----------------" + Environment.NewLine);
                 File.AppendAllText(saveFileDialog.FileName, "Clock In Time: " + clockInTime.ToString("dddd, dd MMMM yyyy HH:mm:ss") + Environment.NewLine);
                 File.AppendAllText(saveFileDialog.FileName, "Clock Out Time: " + clockOutTime.ToString("dddd, dd MMMM yyyy HH:mm:ss") + Environment.NewLine);
-                File.AppendAllText(saveFileDialog.FileName, "Time Worked: " + timeWorked.ToString("HH:mm:ss") + Environment.NewLine);
+                File.AppendAllText(saveFileDialog.FileName, "Time Worked: " + timeWorked.ToString(@"dd\.hh\:mm\:ss") + Environment.NewLine);
                 File.AppendAllText(saveFileDialog.FileName, "Money Earned: €" + revenue.ToString() + Environment.NewLine);
                 File.AppendAllText(saveFileDialog.FileName, "----------------");
                 MessageBox.Show("Data is saved successfully!", "Save Information");
